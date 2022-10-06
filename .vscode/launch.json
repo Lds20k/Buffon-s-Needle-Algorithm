@@ -1,0 +1,23 @@
+{
+    "configurations": [
+
+      {
+        "name": "gdb: launch -l bin/mbr.bin",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/bin/fdisk-bcc",
+        "args": [
+          "-l",
+          "bin/mbr.bin"
+        ],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "launchCompleteCommand": "exec-run",
+        "linux": {
+          "MIMode": "gdb",
+          "miDebuggerPath": "/usr/bin/gdb",
+          "preLaunchTask": "make: debug"
+        }
+      }
+    ]
+  }
